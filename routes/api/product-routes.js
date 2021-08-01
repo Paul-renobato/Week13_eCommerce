@@ -57,7 +57,7 @@ router.post('/', (req, res) => {
     });
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
   Product.update(req.body, {
     where: {
       id: req.params.id,
